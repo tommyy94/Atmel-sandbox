@@ -1,5 +1,5 @@
 /*
- * This program blinks led and when external interrupt (switch) happens,
+ * This program blinks led and pin change interrupt (switch) happens,
  * the other led is lit.
  */
 
@@ -34,7 +34,7 @@ void main(void)
     }
 }
 
-ISR(PCINT0_vect) {
+ISR(PCINT0_vect) { /* earlier enabled pin */
     if(!(PINB & (1 << SWITCH_PIN))) {
         PORTD |= (1 << LED_PIN_1);
     } else if(PINB & (1 << SWITCH_PIN)) {

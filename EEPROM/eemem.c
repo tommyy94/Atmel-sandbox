@@ -1,11 +1,16 @@
+/** 
+ * This program initializes EEPROM with users values at build stage.
+ * Then it reads the data.
+ */
 #include <avr/eeprom.h>
 
 #define SIZE 10
 
-/** Following initializes .eep file (.eseg) with values
-  * and it needs to be uploaded to MCU separately.
-  * Attribute section can't be specified for local variables.
-  */
+/** 
+ * Following initializes .eep file (.eseg) with values
+ * and it needs to be uploaded to MCU separately.
+ * Attribute section can't be specified for local variables.
+ */
 uint32_t EEMEM integer = 69;
 uint8_t EEMEM character = 'Q';
 uint8_t EEMEM string[SIZE] = "WASD";

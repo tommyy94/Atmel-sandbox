@@ -19,16 +19,16 @@ reset:
     out SPL, YL
 
     ;load some random values
-	ldi r20, $03
-	ldi r21, $02
-	ldi r22, $01
+    ldi r20, $03
+    ldi r21, $02
+    ldi r22, $01
 
     ;push them on stack
     push r20
     push r21
     push r22
 
-	rcall calc_sum
+    rcall calc_sum
     
     ;only result needed, stored in r16
     pop r0  ;Y+3
@@ -57,12 +57,12 @@ calc_sum:
     add r18, r17
 
     ;store result on stack
-	std Y+5, r18
+    std Y+5, r18
 
     ;restore stack pointer
     out SPH, YH
     out SPL, YL
-	ret
+    ret
 
 
 .exit

@@ -13,21 +13,6 @@
 #define RX_LED PB1
 #define SWITCH_PIN PB2
 
-#define XTAL F_CPU/**
- * Example how to communicate between two microcontrollers (ATmega16 used).
- * Pressing switch transmits data to other MCU.
- * Blinking leds indicate TX/RX.
- */
-
-#define F_CPU 8000000UL
-#include <avr/io.h>
-#include <util/delay.h>
-#include <avr/interrupt.h>
-
-#define TX_LED PB0
-#define RX_LED PB1
-#define SWITCH_PIN PB2
-
 #define XTAL F_CPU
 #define BAUD 9600
 #define OVERHEAD_ADJUST 1

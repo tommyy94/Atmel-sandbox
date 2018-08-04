@@ -1,6 +1,6 @@
 /**
  * This program uses software UART to communicate.
- * Currently it is only capable of tranmitting data, max 6000 baud.
+ * Currently it is only capable of transmitting data, max 6000 baud.
  */
 
 #define F_CPU 8000000UL
